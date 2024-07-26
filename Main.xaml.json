@@ -1,0 +1,33 @@
+{
+  "DisplayName": "StateMachine",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "Original_Query",
+      "DisplayName": "Original_Query",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Use my zoom meeting transcript for Intel Quality Meeting to update my meddpicc fields on the opportunity called TESTING AUTOPILOT INTEGRATION - DO NOT USE",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "argument1",
+      "DisplayName": "argument1",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

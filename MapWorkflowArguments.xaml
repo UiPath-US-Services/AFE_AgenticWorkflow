@@ -1,0 +1,256 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="MapWorkflowArguments" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uast="clr-namespace:UiPath.Activities.System.Text;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C2E515C2AB9_generateChatCompletion_Create.Bundle;assembly=C2E515C2AB9_generate.1GnU63Xp9QO18mS7jEopom" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="OutputFormatTemplate" Type="InArgument(x:String)" />
+    <x:Property Name="ToolArgumentsJobj" Type="OutArgument(njl:JObject)" />
+    <x:Property Name="Arguments" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="Task" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1649.6,1142.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.Activities.System.Text</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="416,1077.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="ProcessArgumentsTxt" />
+      <Variable x:TypeArguments="x:String" Name="ProcessArgumentsJsonTxt" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <isactr:ConnectorActivity Configuration="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" ConnectionId="74bbe33c-9089-47b7-a3e1-302e515c2ab9" DisplayName="Content Generation" sap:VirtualizedContainerService.HintSize="353.6,372" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+      <isactr:ConnectorActivity.FieldObjects>
+        <isactr:FieldObject Name="modelName" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">gpt-4o-2024-05-13</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="prompt" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String" xml:space="preserve">["You are tasked with semantically mapping data from the current JSON and the additional_information JSON to an output JSON template. Your goal is to extract relevant information from the input and populate the output template accordingly, without modifying the structure or keys of the output template.
+
+Here is your current task: 
+&lt;current_task&gt;
+"+Task+"
+&lt;/current_task&gt;
+
+Here is more information that may help you:
+&lt;additional_information&gt;" +String.Join(Environment.NewLine, Arguments.Select(Function(kvp) $"{kvp.Key}: {kvp.Value}")) +"
+&lt;/additional_information&gt;
+
+Here is the output JSON template:
+&lt;output_json_template&gt;
+"+OutputFormatTemplate+"
+&lt;/output_json_template&gt;
+
+Follow these steps to complete the task:
+
+1. Analyze the input JSON and the output JSON template carefully.
+
+2. For each key in the output JSON template, identify the corresponding information in the input JSON. The mapping should be based on semantic meaning, not just matching key names.
+
+3. Extract the relevant value from the input JSON and assign it to the corresponding key in the output JSON.
+
+4. If a piece of information required by the output template is not present in the input JSON, leave the value as an empty string.
+
+5. Do not add any keys that are not present in the output JSON template.
+
+6. Do not modify or update the key names in the output JSON template.
+
+7. Ensure that the values in the output JSON match exactly with the corresponding values in the input JSON. Do not modify, summarize, or interpret the values.
+
+8. If the input JSON contains information that is not required by the output JSON template, simply ignore it.
+
+9. Preserve the data types of the values. For example, if a value is a number in the input JSON, it should remain a number in the output JSON.
+
+10. After mapping all the values, format your response as a valid JSON object.
+
+Provide your final output inside &lt;answer&gt; tags. Ensure that the output is a valid JSON object that matches the structure of the output template, with the appropriate values filled in from the input JSON. Do not output a json array, just a json object"]</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+        <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+        <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+        <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+        <isactr:FieldObject Name="topK" Type="FieldArgument" />
+        <isactr:FieldObject Name="topP" Type="FieldArgument" />
+        <isactr:FieldObject Name="top_p" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="instruction" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">You are a helpful assistant</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="temperature" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Double">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">0</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">0</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="n" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="stream" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="_stop" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="out_text" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="x:String">[ProcessArgumentsTxt]</OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="Jit_generateChatCompletion" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb:generateChatCompletion_Create" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+      </isactr:ConnectorActivity.FieldObjects>
+    </isactr:ConnectorActivity>
+    <uast:ExtractText FirstMatch="{x:Null}" Results="{x:Null}" DisplayName="Extract Text" EndingText="&lt;/answer&gt;" ExtractBaseURLOnly="False" ExtractOptions="BetweenStrings" sap:VirtualizedContainerService.HintSize="353.6,328.8" sap2010:WorkflowViewState.IdRef="ExtractText_1" IgnoreDuplicates="False" MatchCase="False" Result="[ProcessArgumentsJsonTxt]" Source="[ProcessArgumentsTxt]" StartingText="&lt;answer&gt;" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[ProcessArgumentsJsonTxt]" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[ToolArgumentsJobj]" JsonString="[ProcessArgumentsJsonTxt]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:DeserializeJson>
+  </Sequence>
+</Activity>
