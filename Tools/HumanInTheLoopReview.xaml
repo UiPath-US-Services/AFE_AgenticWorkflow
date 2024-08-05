@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="HumanInTheLoopReview" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="HumanInTheLoopReview" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C2E515C2AB9_generateChatCompletion_Create.Bundle;assembly=C2E515C2AB9_generate.1GnU63Xp9QO18mS7jEopom" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Arguments" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="Task" Type="InArgument(x:String)" />
@@ -6,8 +6,8 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1649.6,956.8</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>HumanInTheLoopReview_1</sap2010:WorkflowViewState.IdRef>
+  <sap:VirtualizedContainerService.HintSize>2149.6,1644</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ToolTemplate_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -36,6 +36,21 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -65,19 +80,241 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="HumanInTheLoopReview" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="HumanInTheLoopReview" sap:VirtualizedContainerService.HintSize="603.2,1579.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="ToolVariableTemplate" />
+      <Variable x:TypeArguments="x:String" Name="HumanInTheLoopQuestion" />
+      <Variable x:TypeArguments="x:String" Name="Answer" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Tool Specific Variable Extraction" sap:VirtualizedContainerService.HintSize="540.8,617.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="njl:JObject" Name="ToolArguments" />
+        <Variable x:TypeArguments="x:String" Name="Temp" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[ToolVariableTemplate]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">["{""HumanInTheLoopQuestion"": ""The question you need to ask the end user. Do a review of the previous task and ask the user what would need to be done or approved to continue.""}"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MapWorkflowArguments - Invoke Workflow File (MapWorkflowArguments.xaml)" sap:VirtualizedContainerService.HintSize="478.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="MapWorkflowArguments.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="OutputFormatTemplate">[ToolVariableTemplate]</InArgument>
+          <OutArgument x:TypeArguments="njl:JObject" x:Key="ToolArgumentsJobj">[ToolArguments]</OutArgument>
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Arguments">[Arguments]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Task" />
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,140.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[HumanInTheLoopQuestion]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ToolArguments("HumanInTheLoopQuestion").ToString()]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+    </Sequence>
+    <isactr:ConnectorActivity Configuration="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" ConnectionId="74bbe33c-9089-47b7-a3e1-302e515c2ab9" DisplayName="Content Generation" sap:VirtualizedContainerService.HintSize="540.8,372" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+      <isactr:ConnectorActivity.FieldObjects>
+        <isactr:FieldObject Name="modelName" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">anthropic.claude-3-5-sonnet-20240620-v1:0</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="prompt" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String" xml:space="preserve">["You are a human-In-the-Loop question generator. Your role Is To review the provided information, generate relevant questions If needed, and if not, confirm the next steps
+
+Here Is the input question which is a high level question without input context. Use the arguments below to draft a better question:
+&lt;input_question&gt;
+"+ HumanInTheLoopQuestion+ "
+&lt;/input_question&gt;
+
+Here Is the task description. this is the current objective of the question. Please use this to inform which arguments are important:
+&lt;task_description&gt;
+"+Task+"
+&lt;/task_description&gt;
+
+Here are the arguments provided. Not all arguments will be useful, and you may need use only parts of the arguments.:
+&lt;arguments&gt;
+"+String.Join(Environment.NewLine, Arguments.Select(Function(kvp) $"{kvp.Key}: {kvp.Value}")) + "
+&lt;/arguments&gt;
+
+Carefully review the input question, task description, And arguments. Analyze the information To determine If you need any additional clarification Or details To accomplish the task effectively.
+
+If you have any questions:
+1. Generate clear, concise questions that address specific aspects Of the task Or input that require clarification.
+2. Ensure Each question Is relevant And necessary For accomplishing the task.
+3. Prioritize questions that will have the most significant impact On your ability To complete the task accurately.
+
+If you have no questions:
+1. Provide a brief, clear description Of your plan To accomplish the task.
+2. Outline the main steps you intend To Take.
+3. Explain how you will use the provided information To achieve the desired outcome.
+
+Output your response In the following format:
+&lt;questions&gt;
+[""Your first question""]
+[""Your second question""]
+[...]
+&lt;/questions&gt;
+&lt;confrimation&gt;
+&lt;/confrimation&gt;
+
+If you have no questions:
+&lt;questions&gt;
+&lt;/questions&gt;
+&lt;confrimation&gt;
+A short string asking to approve what you are looking to do, should be a yes/no question. Be very specific with what your next actions are including what is changing, needing updates, how you internalize the request, etc. 
+&lt;/confrimation&gt;
+
+After providing your questions Or plan, ask the user: ""Do you approve Of this approach? If you have any additional information Or clarifications, please provide them.""
+
+Remember, your goal Is To ensure you have all the necessary information To accomplish the task effectively And efficiently."]</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+        <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+        <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+        <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+        <isactr:FieldObject Name="topK" Type="FieldArgument" />
+        <isactr:FieldObject Name="topP" Type="FieldArgument" />
+        <isactr:FieldObject Name="top_p" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="instruction" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">You are a helpful assistant</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="temperature" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Double">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">0</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">0</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="n" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="stream" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="_stop" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="out_text" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="x:String">[HumanInTheLoopQuestion]</OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="Jit_generateChatCompletion" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb:generateChatCompletion_Create" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+      </isactr:ConnectorActivity.FieldObjects>
+    </isactr:ConnectorActivity>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="540.8,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="[HumanInTheLoopQuestion]" Title="Question from Agent">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[Answer]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="540.8,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Answer]" />
+    <Assign sap:VirtualizedContainerService.HintSize="540.8,104.8" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Object">[Arguments(HumanInTheLoopQuestion)]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Object">[Answer]</InArgument>
+      </Assign.Value>
+    </Assign>
   </Sequence>
 </Activity>

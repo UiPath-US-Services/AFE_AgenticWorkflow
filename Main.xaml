@@ -1,12 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="StateMachine" this:StateMachine.Original_Query="Can you find the email called Testing with Autopilot, process the requested changes, and draft an email back saying that it has been completed?" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uast="clr-namespace:UiPath.Activities.System.Text;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C2E515C2AB9_generateChatCompletion_Create.Bundle;assembly=C2E515C2AB9_generate.1GnU63Xp9QO18mS7jEopom" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="StateMachine" this:StateMachine.Original_Query="Can you find the email called Testing with Autopilot, process the requested changes, and draft an email back saying that it has been completed?" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uast="clr-namespace:UiPath.Activities.System.Text;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C2E515C2AB9_generateChatCompletion_Create.Bundle;assembly=C2E515C2AB9_generate.1GnU63Xp9QO18mS7jEopom" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Original_Query" Type="InArgument(x:String)" />
-    <x:Property Name="argument1" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2049.6,776</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2149.6,1187.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -49,6 +48,7 @@
       <x:String>System.Collections.Specialized</x:String>
       <x:String>UiPath.Web.Activities</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -119,17 +119,17 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID3}" DisplayName="Main Workflow" sap:VirtualizedContainerService.HintSize="633.6,636.8" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID4}" DisplayName="Main Workflow" sap:VirtualizedContainerService.HintSize="697.6,648" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-        <x:Double x:Key="StateContainerWidth">600</x:Double>
-        <x:Double x:Key="StateContainerHeight">600</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">273,77.7 273,107.7 162.92,107.7 162.92,121.20000000000002</av:PointCollection>
+        <x:Double x:Key="StateContainerWidth">663.6</x:Double>
+        <x:Double x:Key="StateContainerHeight">611.2</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">291,77.7 290,77.7 290,101.19999999999999</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID3" DisplayName="Input Normalization" sap:VirtualizedContainerService.HintSize="141.6,97.6" sap2010:WorkflowViewState.IdRef="State_1">
+    <State x:Name="__ReferenceID4" DisplayName="Input Normalization" sap:VirtualizedContainerService.HintSize="141.6,97.6" sap2010:WorkflowViewState.IdRef="State_1">
       <State.Entry>
         <Sequence sap:VirtualizedContainerService.HintSize="496,1531.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
@@ -303,7 +303,7 @@ Now, process the given input query And provide your answer In JSON format, enclo
       </State.Entry>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">99.19999999999999,121.20000000000002</av:Point>
+          <av:Point x:Key="ShapeLocation">219.2,101.19999999999999</av:Point>
           <av:Size x:Key="ShapeSize">141.6,97.6</av:Size>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Double x:Key="StateContainerWidth">106</x:Double>
@@ -316,24 +316,63 @@ Now, process the given input query And provide your answer In JSON format, enclo
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
-              <av:PointCollection x:Key="ConnectorLocation">177.07999999999998,218.8 177.07999999999998,248.80000000000004 270,248.80000000000004 270,279.2</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">297.08,198.79999999999998 297.08,228.79999999999998 280,228.79999999999998 280,255.60000000000002</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
             <State x:Name="__ReferenceID0" DisplayName="Planning" sap:VirtualizedContainerService.HintSize="133.6,68.8" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <Sequence sap:VirtualizedContainerService.HintSize="496,1603.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence sap:VirtualizedContainerService.HintSize="592,2412" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="PlanText" />
                     <Variable x:TypeArguments="x:String" Name="ExtractedPlan" />
                     <Variable x:TypeArguments="x:String" Name="Prompt" />
+                    <Variable x:TypeArguments="x:String" Name="ExceptionPrompt" />
+                    <Variable x:TypeArguments="x:String" Name="ErrorMod" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.6,115.2" sap2010:WorkflowViewState.IdRef="Assign_11">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Starting: Planning&quot;]" />
+                  <If Condition="[SystemException isnot Nothing]" sap:VirtualizedContainerService.HintSize="529.6,582.4" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,307.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_13">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ErrorMod]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["When running the step with the provided input arguments, the following error was encontered, be sure to take this into consideration when building out the plan, or call on the user with humanintheloopreview.xaml and providing the error message if you are unclear on steps to resolve the issue: Error details: "+ SystemException.Message + " Exception Data: " + SystemException.Data.ToString]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_15">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <Assign sap:VirtualizedContainerService.HintSize="529.6,115.2" sap2010:WorkflowViewState.IdRef="Assign_11">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Prompt]</OutArgument>
                     </Assign.To>
@@ -356,6 +395,8 @@ Input Task:
 
 &lt;workflow_memory&gt;" + String.Join(Environment.NewLine, Arguments.Select(Function(kvp) $"{kvp.Key}: {kvp.Value}")) +"&lt;/workflow_memory&gt;
 
+"+ ErrorMod + "
+
 Available Workflows:
 GetSalesforceOpportunity.xaml - Retrieves a single Salesforce opportunity data based on specific criteria. Needs the name of the opportunity or Id of the opportunity retrieved through the GetSalesforceOpportunities.xaml workflow or other contexts.
 GetSalesforceAccount.xaml - Retrieves a single Salesforce account data based on specific criteria. Needs exact account name or account ID.
@@ -376,6 +417,7 @@ SendReply.xaml - Creates and sends a reply to an email. Needs the emailID, messa
 Special Workflows:
 UpdatePlan.xaml - Use this ONLY to update the plan with critical new information from executed workflows. Do not start with this workflow or use it unnecessarily.
 NoMoreStep.xaml - Use this to specify when you are completed with the original task. This workflow should be used as an exit condition when there are no more steps to process. Calling UpdatePlan.xaml before this is not required.
+HumanInTheLoopReview.xaml - Use this to ask questions to the end user, where the question and answer will be added to yhe workflow_memory. After this step, always call updateplan.xaml so that the answer can be incorporated into the response
 
 Instructions:
 1. Analyze the input task to understand the overall objective. Consider the current arguments in &lt;workflow_memory&gt; to decide if a task needs to be completed.
@@ -424,8 +466,8 @@ Now, process the given input query and provide your answer in JSON format, enclo
 Remember to use the &lt;thinking&gt; space to articulate your reasoning before generating the final execution plan."]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[Prompt]" />
-                  <isactr:ConnectorActivity Configuration="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" ConnectionId="74bbe33c-9089-47b7-a3e1-302e515c2ab9" DisplayName="Content Generation" sap:VirtualizedContainerService.HintSize="433.6,372" sap2010:WorkflowViewState.IdRef="ConnectorActivity_3" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[Prompt]" />
+                  <isactr:ConnectorActivity Configuration="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" ConnectionId="74bbe33c-9089-47b7-a3e1-302e515c2ab9" DisplayName="Content Generation" sap:VirtualizedContainerService.HintSize="529.6,372" sap2010:WorkflowViewState.IdRef="ConnectorActivity_3" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
                     <isactr:ConnectorActivity.FieldObjects>
                       <isactr:FieldObject Name="modelName" Type="FieldArgument">
                         <isactr:FieldObject.Value>
@@ -518,11 +560,10 @@ Remember to use the &lt;thinking&gt; space to articulate your reasoning before g
                       </isactr:FieldObject>
                     </isactr:ConnectorActivity.FieldObjects>
                   </isactr:ConnectorActivity>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Full Plan: &quot;+  PlanText]" />
-                  <uast:ExtractText FirstMatch="{x:Null}" Results="{x:Null}" DisplayName="Extract Text between HTML tags" EndingText="&lt;/answer&gt;" ExtractBaseURLOnly="False" ExtractOptions="BetweenStrings" sap:VirtualizedContainerService.HintSize="433.6,328.8" sap2010:WorkflowViewState.IdRef="ExtractText_2" IgnoreDuplicates="False" MatchCase="False" Result="[ExtractedPlan]" Source="[PlanText]" StartingText="&lt;answer&gt;" />
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Plan:&quot; + ExtractedPlan]" />
-                  <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_3" JsonObject="[ExtractedPlanJsonObj]" JsonString="[ExtractedPlan]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <uast:ExtractText FirstMatch="{x:Null}" Results="{x:Null}" DisplayName="Extract Text between HTML tags" EndingText="&lt;/answer&gt;" ExtractBaseURLOnly="False" ExtractOptions="BetweenStrings" sap:VirtualizedContainerService.HintSize="529.6,328.8" sap2010:WorkflowViewState.IdRef="ExtractText_2" IgnoreDuplicates="False" MatchCase="False" Result="[ExtractedPlan]" Source="[PlanText]" StartingText="&lt;answer&gt;" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Plan:&quot; + ExtractedPlan]" />
+                  <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="529.6,122.4" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_3" JsonObject="[ExtractedPlanJsonObj]" JsonString="[ExtractedPlan]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="529.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Object">[Arguments("CurrentPlan")]</OutArgument>
                     </Assign.To>
@@ -530,11 +571,12 @@ Remember to use the &lt;thinking&gt; space to articulate your reasoning before g
                       <InArgument x:TypeArguments="x:Object">[ExtractedPlan]</InArgument>
                     </Assign.Value>
                   </Assign>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Finished: Planning&quot;]" />
                 </Sequence>
               </State.Entry>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">203.2,279.2</av:Point>
+                  <av:Point x:Key="ShapeLocation">213.2,255.60000000000002</av:Point>
                   <av:Size x:Key="ShapeSize">133.6,68.8</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Double x:Key="StateContainerWidth">100</x:Double>
@@ -542,125 +584,176 @@ Remember to use the &lt;thinking&gt; space to articulate your reasoning before g
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <State.Transitions>
-                <Transition DisplayName="T2" sap2010:WorkflowViewState.IdRef="Transition_7">
+                <Transition DisplayName="Process Plan Steps" sap:VirtualizedContainerService.HintSize="448.8,490.4" sap2010:WorkflowViewState.IdRef="Transition_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">270,348 270,377.99999999999994 406.79999999999995,377.99999999999994 406.79999999999995,496.15999999999997 376.79999999999995,496.15999999999997</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">280,324.40000000000003 280,354.4 289.96,354.4 289.96,459.2</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
-                      <x:Int32 x:Key="DestConnectionPointIndex">44</x:Int32>
+                      <x:Int32 x:Key="DestConnectionPointIndex">26</x:Int32>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.To>
-                    <State x:Name="__ReferenceID2" DisplayName="Execution" sap:VirtualizedContainerService.HintSize="133.6,61.6" sap2010:WorkflowViewState.IdRef="State_4">
+                    <State x:Name="__ReferenceID1" DisplayName="Execution" sap:VirtualizedContainerService.HintSize="133.6,61.6" sap2010:WorkflowViewState.IdRef="State_4">
                       <State.Entry>
-                        <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="[idx]" DisplayName="For Each currentStep" sap:VirtualizedContainerService.HintSize="625.6,2416" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ExtractedPlanJsonObj(&quot;execution_plan&quot;)]">
-                          <ui:ForEach.Body>
-                            <ActivityAction x:TypeArguments="njl:JToken">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentStep" />
-                              </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,2301.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <If Condition="[currentStep(&quot;workflow_name&quot;).ToString.ToLower = &quot;UpdatePlan.xaml&quot;.ToLower]" sap:VirtualizedContainerService.HintSize="529.6,692.8" sap2010:WorkflowViewState.IdRef="If_1">
-                                  <If.Then>
-                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,417.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
-                                        <Assign.To>
-                                          <OutArgument x:TypeArguments="x:Boolean">[UpdatePlan]</OutArgument>
-                                        </Assign.To>
-                                        <Assign.Value>
-                                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                        </Assign.Value>
-                                      </Assign>
-                                      <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Add">
-                                        <InvokeMethod.TargetObject>
-                                          <InArgument x:TypeArguments="njl:JArray">[CompletedSteps]</InArgument>
-                                        </InvokeMethod.TargetObject>
-                                        <InArgument x:TypeArguments="njl:JToken">[currentStep]</InArgument>
-                                      </InvokeMethod>
-                                      <ui:Break sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="Break_1" />
-                                    </Sequence>
-                                  </If.Then>
-                                  <If.Else>
-                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </Sequence>
-                                  </If.Else>
-                                </If>
-                                <If Condition="[currentStep(&quot;workflow_name&quot;).ToString.ToLower = &quot;NoMoreStep.xaml&quot;.ToLower]" sap:VirtualizedContainerService.HintSize="529.6,579.2" sap2010:WorkflowViewState.IdRef="If_2">
-                                  <If.Then>
-                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,304" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Add">
-                                        <InvokeMethod.TargetObject>
-                                          <InArgument x:TypeArguments="njl:JArray">[CompletedSteps]</InArgument>
-                                        </InvokeMethod.TargetObject>
-                                        <InArgument x:TypeArguments="njl:JToken">[currentStep]</InArgument>
-                                      </InvokeMethod>
-                                      <ui:Break sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="Break_2" />
-                                    </Sequence>
-                                  </If.Then>
-                                  <If.Else>
-                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </Sequence>
-                                  </If.Else>
-                                </If>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Starting: &quot; + currentStep(&quot;workflow_name&quot;).ToString]" />
-                                <Assign sap:VirtualizedContainerService.HintSize="529.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Object">[Arguments("CurrentStepInPlan")]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Object">[currentStep("workflow_name")]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                                <Assign sap:VirtualizedContainerService.HintSize="529.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Object">[Arguments("CurrentStepIndex")]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Object">[idx]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="529.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="[path.join(Environment.CurrentDirectory,&quot;Tools&quot;, currentStep(&quot;workflow_name&quot;).ToString)]">
-                                  <ui:InvokeWorkflowFile.Arguments>
-                                    <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Arguments">[Arguments]</InOutArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="Task">[currentStep.ToString]</InArgument>
-                                  </ui:InvokeWorkflowFile.Arguments>
-                                </ui:InvokeWorkflowFile>
-                                <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="529.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Add">
-                                  <InvokeMethod.TargetObject>
-                                    <InArgument x:TypeArguments="njl:JArray">[CompletedSteps]</InArgument>
-                                  </InvokeMethod.TargetObject>
-                                  <InArgument x:TypeArguments="njl:JToken">[currentStep]</InArgument>
-                                </InvokeMethod>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Finished: &quot; + currentStep(&quot;workflow_name&quot;).ToString]" />
-                              </Sequence>
-                            </ActivityAction>
-                          </ui:ForEach.Body>
-                        </ui:ForEach>
+                        <Sequence sap:VirtualizedContainerService.HintSize="688,2933.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="625.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Starting: Execution&quot;]" />
+                          <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="[idx]" DisplayName="For Each currentStep" sap:VirtualizedContainerService.HintSize="625.6,2670.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ExtractedPlanJsonObj(&quot;execution_plan&quot;)]">
+                            <ui:ForEach.Body>
+                              <ActivityAction x:TypeArguments="njl:JToken">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentStep" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,2532.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[currentStep(&quot;workflow_name&quot;).ToString.ToLower = &quot;UpdatePlan.xaml&quot;.ToLower]" sap:VirtualizedContainerService.HintSize="529.6,692.8" sap2010:WorkflowViewState.IdRef="If_1">
+                                    <If.Then>
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,417.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Boolean">[UpdatePlan]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Add">
+                                          <InvokeMethod.TargetObject>
+                                            <InArgument x:TypeArguments="njl:JArray">[CompletedSteps]</InArgument>
+                                          </InvokeMethod.TargetObject>
+                                          <InArgument x:TypeArguments="njl:JToken">[currentStep]</InArgument>
+                                        </InvokeMethod>
+                                        <ui:Break sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                  <If Condition="[currentStep(&quot;workflow_name&quot;).ToString.ToLower = &quot;NoMoreStep.xaml&quot;.ToLower]" sap:VirtualizedContainerService.HintSize="529.6,579.2" sap2010:WorkflowViewState.IdRef="If_2">
+                                    <If.Then>
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,304" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Add">
+                                          <InvokeMethod.TargetObject>
+                                            <InArgument x:TypeArguments="njl:JArray">[CompletedSteps]</InArgument>
+                                          </InvokeMethod.TargetObject>
+                                          <InArgument x:TypeArguments="njl:JToken">[currentStep]</InArgument>
+                                        </InvokeMethod>
+                                        <ui:Break sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="Break_2" />
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Starting: &quot; + currentStep(&quot;workflow_name&quot;).ToString]" />
+                                  <Assign sap:VirtualizedContainerService.HintSize="529.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Object">[Arguments("CurrentStepInPlan")]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Object">[currentStep("workflow_name")]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap:VirtualizedContainerService.HintSize="529.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Object">[Arguments("CurrentStepIndex")]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Object">[idx]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="529.6,437.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                    <TryCatch.Try>
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334.4,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="[path.join(Environment.CurrentDirectory,&quot;Tools&quot;, currentStep(&quot;workflow_name&quot;).ToString)]">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Arguments">[Arguments]</InOutArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="Task">[currentStep.ToString]</InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
+                                    </TryCatch.Try>
+                                    <TryCatch.Catches>
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="s:Exception">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                          </ActivityAction.Argument>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="496,364" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="s:Exception">[exception]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Boolean">[UpdatePlan]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <ui:Break sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="Break_3" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </Catch>
+                                    </TryCatch.Catches>
+                                  </TryCatch>
+                                  <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="529.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Add">
+                                    <InvokeMethod.TargetObject>
+                                      <InArgument x:TypeArguments="njl:JArray">[CompletedSteps]</InArgument>
+                                    </InvokeMethod.TargetObject>
+                                    <InArgument x:TypeArguments="njl:JToken">[currentStep]</InArgument>
+                                  </InvokeMethod>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Finished: &quot; + currentStep(&quot;workflow_name&quot;).ToString]" />
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ForEach.Body>
+                          </ui:ForEach>
+                        </Sequence>
                       </State.Entry>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -680,7 +773,7 @@ Remember to use the &lt;thinking&gt; space to articulate your reasoning before g
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.Condition>[UpdatePlan = False]</Transition.Condition>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="133.6,61.6" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
+                            <State x:Name="__ReferenceID2" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="133.6,61.6" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">23.200000000000003,509.20000000000005</av:Point>
@@ -691,11 +784,11 @@ Remember to use the &lt;thinking&gt; space to articulate your reasoning before g
                             </State>
                           </Transition.To>
                         </Transition>
-                        <Transition DisplayName="T4" sap:VirtualizedContainerService.HintSize="533.6,490.4" sap2010:WorkflowViewState.IdRef="Transition_8">
+                        <Transition DisplayName="Update Plan" sap:VirtualizedContainerService.HintSize="533.6,490.4" sap2010:WorkflowViewState.IdRef="Transition_8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:PointCollection x:Key="ConnectorLocation">310,459.2 310,429.19999999999993 173.2,429.19999999999993 173.2,313.59999999999997 203.2,313.59999999999997</av:PointCollection>
-                              <x:Int32 x:Key="SrcConnectionPointIndex">38</x:Int32>
+                              <av:PointCollection x:Key="ConnectorLocation">243.2,471.52 183.19999999999993,471.52 183.19999999999993,290 213.2,290</av:PointCollection>
+                              <x:Int32 x:Key="SrcConnectionPointIndex">13</x:Int32>
                               <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -712,7 +805,58 @@ Remember to use the &lt;thinking&gt; space to articulate your reasoning before g
                               </Assign.Value>
                             </Assign>
                           </Transition.Action>
-                          <Transition.Condition>[UpdatePlan = True]</Transition.Condition>
+                          <Transition.Condition>
+                            <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="UpdatePlan = True andalso SystemException is Nothing" />
+                          </Transition.Condition>
+                        </Transition>
+                        <Transition DisplayName="SystemException" sap:VirtualizedContainerService.HintSize="472.79999999999995,490.4" sap2010:WorkflowViewState.IdRef="Transition_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:PointCollection x:Key="ConnectorLocation">376.79999999999995,511.56 557.6800000000001,511.56 557.6800000000001,440.8</av:PointCollection>
+                              <x:Int32 x:Key="SrcConnectionPointIndex">64</x:Int32>
+                              <x:Int32 x:Key="DestConnectionPointIndex">47</x:Int32>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Transition.Condition>
+                            <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="SystemException isnot Nothing andalso UpdatePlan = True" />
+                          </Transition.Condition>
+                          <Transition.To>
+                            <State x:Name="__ReferenceID3" DisplayName="Exception Handler" sap:VirtualizedContainerService.HintSize="140.8,61.6" sap2010:WorkflowViewState.IdRef="State_5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">473.20000000000005,379.2</av:Point>
+                                  <av:Size x:Key="ShapeSize">140.8,61.6</av:Size>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <State.Transitions>
+                                <Transition DisplayName="T2" sap2010:WorkflowViewState.IdRef="Transition_10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:PointCollection x:Key="ConnectorLocation">473.20000000000005,403.84 443.19999999999993,403.84 443.19999999999993,471.52 376.79999999999995,471.52</av:PointCollection>
+                                      <x:Int32 x:Key="SrcConnectionPointIndex">29</x:Int32>
+                                      <x:Int32 x:Key="DestConnectionPointIndex">12</x:Int32>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Transition.To>
+                                    <x:Reference>__ReferenceID1</x:Reference>
+                                  </Transition.To>
+                                </Transition>
+                                <Transition DisplayName="T4" sap2010:WorkflowViewState.IdRef="Transition_11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:PointCollection x:Key="ConnectorLocation">536.5600000000001,379.2 536.5600000000001,296.88 346.79999999999995,296.88</av:PointCollection>
+                                      <x:Int32 x:Key="SrcConnectionPointIndex">34</x:Int32>
+                                      <x:Int32 x:Key="DestConnectionPointIndex">44</x:Int32>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Transition.To>
+                                    <x:Reference>__ReferenceID0</x:Reference>
+                                  </Transition.To>
+                                </Transition>
+                              </State.Transitions>
+                            </State>
+                          </Transition.To>
                         </Transition>
                       </State.Transitions>
                       <State.Variables>
@@ -727,15 +871,17 @@ Remember to use the &lt;thinking&gt; space to articulate your reasoning before g
         </Transition>
       </State.Transitions>
     </State>
-    <x:Reference>__ReferenceID1</x:Reference>
-    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
     <StateMachine.Variables>
       <Variable x:TypeArguments="njl:JObject" Name="ExtractedPlanJsonObj" />
       <Variable x:TypeArguments="x:String" Name="ContextJson" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Arguments" />
       <Variable x:TypeArguments="x:Boolean" Name="UpdatePlan" />
       <Variable x:TypeArguments="njl:JArray" Name="CompletedSteps" />
+      <Variable x:TypeArguments="s:Exception" Name="SystemException" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>

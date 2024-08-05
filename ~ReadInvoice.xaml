@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DraftReply" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ReadInvoice" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Arguments" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="Task" Type="InArgument(x:String)" />
@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1933.6,1169.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2149.6,1187.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ToolTemplate_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -100,21 +100,19 @@
       <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DraftReply" sap:VirtualizedContainerService.HintSize="603.2,1104.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ReadInvoice" sap:VirtualizedContainerService.HintSize="603.2,697.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ToolVariableTemplate" />
-      <Variable x:TypeArguments="x:String" Name="Message" />
-      <Variable x:TypeArguments="x:String" Name="Subject" />
-      <Variable x:TypeArguments="x:String" Name="EmailID" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Tool Specific Variable Extraction" sap:VirtualizedContainerService.HintSize="540.8,680" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Tool Specific Variable Extraction" sap:VirtualizedContainerService.HintSize="540.8,608.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="njl:JObject" Name="ToolArguments" />
         <Variable x:TypeArguments="x:String" Name="Temp" />
@@ -132,11 +130,7 @@
                 <OutArgument x:TypeArguments="x:String">[ToolVariableTemplate]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String" xml:space="preserve">["{
-""EmailID"": ""The ID of the email to reply to"",
-""Subject"": ""The subject of the email you are replying to""
-""Message"":""The body of the message containing your response"" 
-}"]</InArgument>
+                <InArgument x:TypeArguments="x:String">["{""Invoice_File_Path"": ""The file path ""}"]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
           </scg:List>
@@ -150,45 +144,22 @@
           <InArgument x:TypeArguments="x:String" x:Key="Task" />
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,203.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,140.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[EmailID]</OutArgument>
+                <OutArgument x:TypeArguments="x:String">[Temp]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[ToolArguments("EmailID").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[Subject]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[ToolArguments("Subject").ToString]</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[Message]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[ToolArguments("Message").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Sequence>
-    <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process" FolderPath="AutopilotForEveryone/Outlook Automations" sap:VirtualizedContainerService.HintSize="540.8,336" sap2010:WorkflowViewState.IdRef="InvokeProcess_1" ProcessName="Respond to Outlook Email" UsePackage="False">
-      <ui:InvokeProcess.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="EmailID">[EmailID]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Subject">[Subject]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Message">[Message]</InArgument>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="ReplyAll">False</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ResultMessage" />
-      </ui:InvokeProcess.Arguments>
-    </ui:InvokeProcess>
   </Sequence>
 </Activity>
