@@ -197,7 +197,7 @@ Provide your final output inside &lt;answer&gt; tags. Ensure that the output is 
         </isactr:FieldObject>
         <isactr:FieldObject Name="temperature" Type="FieldArgument">
           <isactr:FieldObject.Value>
-            <InArgument x:TypeArguments="x:Double">1</InArgument>
+            <InArgument x:TypeArguments="x:Double">0</InArgument>
           </isactr:FieldObject.Value>
         </isactr:FieldObject>
         <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
