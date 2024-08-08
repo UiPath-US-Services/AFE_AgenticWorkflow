@@ -1,0 +1,49 @@
+﻿{
+  "Metadata": {
+    "Id": "8f3d52e4-cd64-4837-b874-8981e494ccc6",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "HITLForm",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "label": "Questions",
+        "keyLabel": "Question",
+        "disableAddingRemovingRows": true,
+        "tableView": false,
+        "key": "questions",
+        "type": "datamap",
+        "input": true,
+        "valueComponent": {
+          "label": "Answer",
+          "hideLabel": true,
+          "tableView": true,
+          "key": "",
+          "type": "textfield",
+          "input": true
+        }
+      },
+      {
+        "key": "confrimation",
+        "input": false,
+        "tableView": false,
+        "label": "Label",
+        "type": "label"
+      },
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}
